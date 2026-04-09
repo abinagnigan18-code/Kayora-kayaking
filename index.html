@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<title>Kayora Kayaking</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  </head>
+  <script>
+(function(){
+    emailjs.init("zBJFpEX2T9YVv1Me9");
+})();
+</script>
+ <style>
+ .gallery {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.gallery img {
+  width: 300px;
+  max-width: 90%;
+  height: 200px;
+}
+.gallery img:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+/* Header */
+  header {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxMDaEWzVeAvGhVvNPVXhn-VRZh02onuKHf6LzgsnVdxthRZTwySVHjrU&s=10') no-repeat center/cover;
+  color: white;
+  padding: 60px 15px;
+  text-align: center;
+}
+
+h2 {
+  color:black;
+  padding: 15px;
+  text-align:none;
+}
+
+/* Navigation */
+nav {
+  background: black;
+  display: flex-box;
+  justify-content: center;
+}
+
+nav button {
+  background: none;
+  border: 10px;
+  color: yellow;
+  padding: 15px 10px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+nav button:hover {
+  background: #0077b6;
+}
+
+/* Sections */
+section {
+  display: none;
+  padding: 30px;
+}
+
+.active {
+  display: block;
+}
+
+/* Home image */
+.hero {
+  width: 100%;
+  min-height: 250px;
+  background: url('https://secretrouteskayaking.com/assets/images/intro/kochi.jpg') no-repeat center/cover;
+}
+
+/* Form styling */
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+button.submit {
+  background: #0077b6;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button.submit:hover {
+  background: #023e8a;
+}
+h1, h2, h3{
+  font-family: 'AULYARS', cursive;
+}
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 40px;
+}
+body {
+            font-family: Arial;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        h1 {
+            color: white;
+        }
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+}
+
+        th, td {
+            border: 1px solid #333;
+            padding: 20px;
+        }
+
+        th {
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        td {
+            background-color: #ecf0f1;
+        }
+@media (max-width: 768px) {
+
+  nav {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .gallery img {
+    width: 90%;
+    height: auto;
+  }
+
+  input, textarea, select {
+    width: 95%;
+  }
+
+  iframe {
+    width: 100%;
+  }
+}
+td {
+    background-color: #ecf0f1;
+}
+
+/* ADD HERE */
+p {
+  font-family: "Times New Roman", Times, serif;
+}
+</style>
+
+<body>
+
+<header>
+  <h1>Kayora kayaking</h1>
+  <p>Explore the beauty of water</p>
+  <p>Kadamakudy, Pizhala near Govt Hospital</p>
+</header>
+
+
+
+<nav>
+  <button onclick="showPage('home')">Home</button>
+  <button onclick="showPage('about')">About</button>
+  <button onclick="showPage('feedback')">Feedback</button>
+  <button onclick="showPage('booking')">Booking</button>
+  <button onclick="showPage('contact')">contact</button>
+</nav>
+
+</div>
+
+<!-- HOME -->
+<section id="home" class="active">
+  <div class="hero"></div>
+  <h2>Welcome to Kayak Adventure</h2>
+
+  <p>
+    Experience the thrill of kayaking through serene backwaters and beautiful landscapes. 
+    Our guided tours ensure safety, fun, and unforgettable memories.
+  </p>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Kayaking</h2>
+  <p>
+    Kayaking is an exciting water sport where you paddle through rivers, lakes, or oceans 
+    using a small boat called a kayak.
+  </p>
+  <p>
+    In Kochi, kayaking offers a unique experience through mangroves, calm backwaters, 
+    and scenic beauty. It is suitable for beginners and professionals alike.
+  </p>
+  <ul>
+    <li>✔ Safe and guided tours</li>
+    <li>✔ Beautiful nature views</li>
+    <li>✔ Adventure and relaxation</li>
+  </ul>
+<h3>Gallery</h3>
+
+<div class="gallery">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPRl7l7u3-SjonfWKpTKzCpnoSZ3z9FgUCoaeW2ysBgUaVMG97OByW8gj0&s=10">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTukSXRCUzon4C16KzwM-Vt-dOJypLwBr6VrEGkf4oIh1hXpEg_9VGPvhk&s=10">
+
+</div>
+  
+</section>
+
+<!-- FEEDBACK -->
+<section id="feedback">
+  <h3>Customer Feedback</h3>
+  <form onsubmit="submitFeedback(event)">
+    <input type="text" id="fname" placeholder="Your Name" required>
+    <textarea id="fmsg" placeholder="Your Feedback" required></textarea>
+    <button class="submit">Submit</button>
+  </form>
+<ul id="feedbackList"></ul>
+</section>
+<section id="booking">
+<h3>Booking section</h3>
+<h2>deatils you want</h2>
+
+    <table>
+        <tr>
+            <th>number of people </th></th>
+            <th>time</th>
+            <th>Package</th>
+            <th>price</th>
+            
+          
+        </tr>
+
+        <tr>
+            <td>1 person</td>
+            <td>1 hour</td>
+            <td>befor sunset</td>
+            <td>300</td>
+        </tr>
+
+        <tr>
+            <td>2 person</td>
+            <td>1 hour</td>
+            <td>befor sunset</td>
+            <td>450</td>
+            
+        </tr>
+
+        <tr>
+            <td>1 person</td>
+            <td>1 hour</td>
+            <td>sunset</td>
+            <td>350</td>
+            
+        </tr>
+
+        <tr>
+            <td>2 person</td>
+            <td>1 hour</td>
+            <td>sunset</td>
+            <td>500</td>
+            
+        </tr>
+
+        <tr>
+            <td>group(5)</td>
+            <td>1 hour</td>
+            <td>befor sunset</td>
+            <td>1000</td>
+        </tr>
+        <tr>
+        <td>group(5)</td>
+        <td>1 hour</td>
+        <td>sunset</td>
+        <td>1250</td>
+        </tr>
+        <tr>
+          <td>group(5)</td>
+          <td>1 hour</td>
+          <td>Full day</td>
+          <td>2500</td>
+        </tr>
+    </table>
+<!-- BOOKING -->
+<form onsubmit="submitBooking(event)">
+  <input type="text" id="bname" placeholder="Full Name" required>
+<input type="date" id="bdate" required>
+  <select id="bpackage" required>
+    <option value="">Select Package</option>
+    <option>1 Hour Ride</option>
+    <option>2 Hour Ride</option>
+    <option>Only Sunset</option>
+    <option>Full Day Adventure</option>
+  </select>
+
+  <input type="number" id="bpeople" placeholder="Number of People" required>
+
+  <!-- SUBMIT BUTTON -->
+  <button type="submit" class="submit">Book Now</button>
+</form>
+<p id="bookingMessage"></p>
+</section>
+<section id="contact">
+  <h2>Contact & Location</h2>
+  <p>📍 Kadamakudy, Pizhala near Govt Hospital</p>
+  <p>📞 Phone: 7356173979</p>
+  <p>📧 Email: tsr6152@gmail.com</p>
+
+  <h3>Payment Options</h3>
+  <p>✔️ UPI (Google Pay / PhonePe / Paytm)</p>
+  <p>✔️ Cash on arrival</p>
+
+  <h3>Find Us on Map</h3>
+  <iframe src="https://maps.google.com/maps?q=Kadamakudy&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          width="90%" height="300" style="border:0;"></iframe>
+</section>
+  
+<script>
+  
+// Navigation
+function showPage(pageId) {
+  let sections = document.querySelectorAll("section");
+  sections.forEach(sec => sec.classList.remove("active"));
+  document.getElementById(pageId).classList.add("active");
+}
+
+// Feedback system
+function submitFeedback(event) {
+  event.preventDefault();
+
+  let name = document.getElementById("fname").value;
+  let message = document.getElementById("fmsg").value;
+
+  // show on website
+  let li = document.createElement("li");
+  li.textContent = name + "thankyo" + message;
+  document.getElementById("feedbackList").appendChild(li);
+
+  // send email
+  let params = {
+    from_name: name,
+    message: message,
+    to_email: "abinagnigan4@gmail.com"
+  };
+
+  emailjs.send("service_sgp7l3a", "template_1onfkrh", params);
+
+  event.target.reset();
+}
+
+// Booking system
+function submitBooking(event) {
+  event.preventDefault();
+
+  let params = {
+    from_name: document.getElementById("bname").value,
+    booking_date: document.getElementById("bdate").value,
+    package: document.getElementById("bpackage").value,
+    people: document.getElementById("bpeople").value,
+    to_email: "abinagnigan4@gmail.com"
+  };
+
+  emailjs.send("service_sgp7l3a", "template_1onfkrh", params)
+    .then(function() {
+      document.getElementById("bookingMessage").textContent =
+        "Booking sent successfully to Gmail!";
+    })
+    .catch(function() {
+      alert("Error sending booking");
+    });
+
+  event.target.reset();
+}
+
+</script>
+</body>
+      </html>
